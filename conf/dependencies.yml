@@ -1,0 +1,34 @@
+# Application dependencies
+
+require:
+    - play
+
+
+# Application dependencies
+
+require:
+    - play
+#    - yell -> commonrestapi 0.1.4
+    - yell -> playmodauthn 0.1.0
+#    - yell -> commonsqlmodels 0.1.1
+#    - yell -> venuesapiadapter 0.1.5
+#    - yell -> rabbitmq 0.4.1
+repositories:
+    - modules:
+        type: chain
+        using:
+# can use localModule over repoModule if requiring faster development and integration of changes to dependencies
+            - localModules:
+                type: local
+                artifact: ${application.path}/../[module]
+                descriptor: ${application.path}/../[module]/conf/dependencies.yml
+            - repoModules:
+                type: http
+                artifact: http://packages.yellgroup.com/play/[organisation]/[module]-[revision].zip
+                descriptor: http://packages.yellgroup.com/play/[organisation]/[module]-[revision].dependencies.yml                         
+        contains:
+#            - yell -> commonrestapi *
+            - yell -> playmodauthn *
+#            - yell -> commonsqlmodels *
+#            - yell -> venuesapiadapter *
+#            - yell -> rabbitmq *
