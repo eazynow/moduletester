@@ -9,8 +9,8 @@ require:
 require:
     - play
 #    - yell -> commonrestapi 0.1.4
-    - yell -> playmodauthn 0.1.0
-    - yell -> playmodrestapi 0.1.0
+    - yell -> playmodauthn 0.1.2
+    - yell -> playmodutils 0.1.0
 #    - yell -> commonsqlmodels 0.1.1
 #    - yell -> venuesapiadapter 0.1.5
 #    - yell -> rabbitmq 0.4.1
@@ -30,7 +30,7 @@ repositories:
         contains:
 #            - yell -> commonrestapi *
             - yell -> playmodauthn *
-            - yell -> playmodrestapi *
+            - yell -> playmodutils *
 #            - yell -> commonsqlmodels *
 #            - yell -> venuesapiadapter *
 #            - yell -> rabbitmq *

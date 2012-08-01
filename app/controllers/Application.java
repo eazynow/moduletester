@@ -32,7 +32,7 @@ public class Application extends controllers.playmodauthn.APIController {
     		}
     		sb.append("\"access_token\":\"");
     		
-    		sb.append(api.getAccessToken("rob.baines@yellglobal.com", "Newday01"));
+    		//sb.append(api.getAccessToken("rob.baines@yellglobal.com", "Newday01"));
     		sb.append("\"}");
 
 			renderText(sb.toString());
